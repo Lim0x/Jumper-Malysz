@@ -1,0 +1,13 @@
+@use '../color.scss';
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+main {
+  padding: 32px 0;
+  width: 100%;
+  overflow-y: auto;
+  background: color.$background;
+}

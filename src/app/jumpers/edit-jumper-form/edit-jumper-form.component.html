@@ -1,0 +1,14 @@
+<section class="container" *ngIf="originalJumpers">
+  <h1>Edit jumper</h1>
+  <app-jumpers-form (jumpersChange)="onJumpersChange($event)"
+                   [jumpers]="originalJumpers"></app-jumpers-form>
+  <div class="actions">
+    <button class="button" [disabled]="!isValid" (click)="updateJumpers()">
+      <span class="button__label">Done</span>
+    </button>
+    <p class="button button--outlined">
+      <span class="button__label">Cancel</span>
+      <a routerLink=".." class="button__link"></a>
+    </p>
+  </div>
+</section>

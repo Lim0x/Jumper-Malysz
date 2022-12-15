@@ -1,0 +1,32 @@
+<p *ngIf="isJumperLoaded && !jumper">Jumper not found</p>
+
+<article *ngIf="jumper" class="profile">
+    <header>
+        <ul class="tools">
+            <li class="button">
+                Back
+                <a routerLink=".." class="button__link"></a>
+            </li>
+        </ul>
+        <img class="picture" src="https://via.placeholder.com/160" alt="" />
+        <ul class="tools" style="justify-self: end">
+            <li class="button">
+                <a routerLink="edit" class="button__link">Edit</a>
+            </li>
+            <li class="button" (click)="deleteJumper()">Delete</li>
+        </ul>
+    </header>
+    <section class="details">
+        <h1 class="details__title">
+            {{ jumper.firstName }} {{ jumper.lastName }}
+        </h1>
+        <em class="details__line">
+            Urodzony/a w {{ jumper.dateOfBirth | age }} roku</em
+        >
+        <ul class="tile-list">
+            <li class="tile">
+                <span class="tile__line">{{ jumper.position }}</span>
+            </li>
+        </ul>
+    </section>
+</article>

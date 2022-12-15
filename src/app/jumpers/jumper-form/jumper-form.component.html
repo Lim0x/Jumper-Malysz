@@ -1,0 +1,44 @@
+<form
+    class="jumper-form"
+    [formGroup]="jumperForm"
+    (keyup)="onChange()"
+    (change)="onChange()"
+>
+    <div class="field-group">
+        <label for="firstNameInput">Imie</label>
+        <input
+            id="firstNameInput"
+            type="text"
+            formControlName="firstName"
+            minlength="2"
+            required
+        />
+    </div>
+    <div class="field-group">
+        <label for="lastNameInput">Nazwisko</label>
+        <input
+            id="lastNameInput"
+            type="text"
+            formControlName="lastName"
+            minlength="2"
+            required
+        />
+    </div>
+    <div class="field-group">
+        <label for="dateOfBirthInput">Data Urodzenia</label>
+        <input
+            id="dateOfBirthInput"
+            type="date"
+            formControlName="dateOfBirth"
+            required
+        />
+    </div>
+    <div class="field-group">
+        <label for="positionSelect">Mocna Strona</label>
+        <select id="positionSelect" formControlName="position">
+            <option *ngFor="let position of jumperPositions" [value]="position">
+                {{ position }}
+            </option>
+        </select>
+    </div>
+</form>

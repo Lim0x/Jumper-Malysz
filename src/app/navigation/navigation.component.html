@@ -1,0 +1,7 @@
+<ul>
+  <li class="button" *ngFor="let link of links" routerLinkActive="active">
+  
+    <span class="button__label">{{ link.label }}</span>
+    <a [routerLink]="link.link" class="button__link"></a>
+  </li>
+</ul>

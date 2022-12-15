@@ -1,0 +1,32 @@
+@use '../../color.scss';
+
+:host {
+    width: 256px;
+    flex-shrink: 0;
+    background: color.$surface;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 4px;
+    padding: 32px 12px;
+}
+
+.button {
+    background: transparent;
+    color: color.$on-surface;
+    opacity: 0.6;
+    width: 100%;
+
+    &:hover,
+    &.active {
+        background: color.$secondary-container;
+        opacity: 1;
+    }
+
+    &__icon {
+        filter: none;
+    }
+}

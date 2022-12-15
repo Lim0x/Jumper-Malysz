@@ -1,0 +1,23 @@
+<div class="button">
+    <span class="button__label">New jumper</span>
+    <a routerLink="new" class="button__link"></a>
+</div>
+
+<div class="card-list">
+    <a class="card" *ngFor="let jumper of jumpers" [routerLink]="jumper.id">
+        <img
+            class="card__picture"
+            src="https://via.placeholder.com/56"
+            alt=""
+        />
+        <div class="card__wrapper">
+            <p class="card__title">
+                {{ jumper.firstName }} {{ jumper.lastName }} //
+                {{ jumper.position }}
+            </p>
+            <p class="card__description">
+                Urodzony w {{ jumper.dateOfBirth | age }} roku
+            </p>
+        </div>
+    </a>
+</div>
